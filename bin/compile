@@ -39,5 +39,7 @@ fi
 
 cd $cache/mosquitto-$ver/mosquitto-$ver
 make
-make install
+
+cp  lib/*.so.1 vendor/mosquitto-$ver/lib
+
 
