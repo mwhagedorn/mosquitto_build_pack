@@ -7,8 +7,10 @@ mkdir -p "$1" "$2"
 build=$(cd "$1/" && pwd)
 cache=$(cd "$2/" && pwd)
 ver=${MOSQUITTOVERSION:-1.2.1}
+MOSQUITTO_VENDOR = "vendor/mosquitto-$ver"
 file=${MOSQUITTOFILE:-mosquitto-$ver.tar.gz}
 url=${MOSQUITTOURL:-http://mosquitto.org/files/source/$file}
+mkdir 
 
 if test -e $build/bin && ! test -d $build/bin
 then
@@ -38,8 +40,8 @@ fi
 #python
 
 cd $cache/mosquitto-$ver/mosquitto-$ver
-make
+mkdir -p $1/$MOSQUITTO_VENDOR
 
-cp  lib/*.so.1 vendor/mosquitto-$ver/lib
+cp  lib/*.so.1 $1/$MOSQUITTO_VENDOR/lib
 
 
