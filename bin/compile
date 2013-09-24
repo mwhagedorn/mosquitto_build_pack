@@ -10,7 +10,7 @@ ver=${MOSQUITTOVERSION:-1.2.1}
 MOSQUITTO_VENDOR="vendor/mosquitto"
 file=${MOSQUITTOFILE:-mosquitto-$ver.tar.gz}
 url=${MOSQUITTOURL:-http://mosquitto.org/files/source/$file}
-mkdir 
+mkdir -p $1/vendor/mosquitto/lib
 
 if test -e $build/bin && ! test -d $build/bin
 then
@@ -40,7 +40,6 @@ fi
 #python
 
 cd $cache/mosquitto-$ver/mosquitto-$ver
-mkdir -p $1/vendor/mosquitto/lib
 echo -n "-----> Copying Mosquitto $ver..."
 cp  lib/*.so.1 1/vendor/mosquitto/lib
 
