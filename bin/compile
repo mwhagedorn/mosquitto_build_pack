@@ -24,7 +24,6 @@ else
     mkdir -p $cache/mosquitto-$ver
     cd $cache/mosquitto-$ver
     echo -n "-----> Installing Mosquitto $ver..."
-    echo -n "-----> Getting Mosquitto $url.."
     curl -sO $url
     tar -zxf $file
     rm -f $file
@@ -40,5 +39,5 @@ fi
 
 cd $cache/mosquitto-$ver/mosquitto-$ver
 make
-sudo make install
+make install
 
