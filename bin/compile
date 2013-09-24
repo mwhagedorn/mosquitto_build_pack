@@ -41,6 +41,6 @@ fi
 
 cd $cache/mosquitto-$ver/mosquitto-$ver
 echo -n "-----> Copying Mosquitto $ver..."
-cp  lib/*.so.1 1/vendor/mosquitto/lib
+cp  ./lib/*.so.1 1/vendor/mosquitto/lib
 
 
