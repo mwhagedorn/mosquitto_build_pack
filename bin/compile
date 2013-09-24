@@ -40,8 +40,8 @@ fi
 #python
 
 cd $cache/mosquitto-$ver/mosquitto-$ver
-mkdir -p $1/vendor/mosquitto
+mkdir -p $1/vendor/mosquitto/lib
 echo -n "-----> Copying Mosquitto $ver..."
-cp  lib/*.so.1 1/vendor/mosquitto/lin
+cp  lib/*.so.1 1/vendor/mosquitto/lib
 
 
